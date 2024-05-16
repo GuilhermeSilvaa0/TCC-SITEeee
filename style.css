@@ -1,0 +1,962 @@
+body{
+    margin: 0;
+    font: normal 20pt Arial;
+}
+
+
+/***************************** VARIAVEIS *****************************/
+:root{
+    --trasition: 0.2s;
+    --radius: 0.25rem;
+}
+
+/***************************** VIDEO INCIO DA PAGINA *****************************/
+.header-video {
+    min-height: 110vh;
+
+    display: flex;
+    flex-direction: column;
+
+    border-image: fill 0 linear-gradient(#0001 60% , rgb(128,221,255)100%);
+} 
+
+.logo{  
+    margin-top: 10%;
+    text-align: center;  
+    color: white;
+}
+    
+.video-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    /*filter: grayscale(60%)
+            brightness(0.07);*/
+    object-fit: cover;
+    z-index: -2;
+}
+
+.container-header{
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    color: white;
+}
+
+.search{
+    width: 50%; 
+    height: 100%;
+
+    background-color: white;
+    border: none;
+
+    text-align: center;
+    font-size: 1.5rem;
+
+    border-radius: 10rem;
+}
+
+
+
+
+.btn-user{
+    font-size: 4rem;
+    color: transparent;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+
+.btn-fav{
+    font-size: 4rem;
+    color: transparent;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.btn-cart{
+    font-size: 4rem;
+    color: transparent;
+    background: transparent;
+    border-color: transparent;  
+    cursor: pointer;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.btn-user>p,
+.btn-fav>p,
+.btn-cart>p{
+    display: grid;
+    font-size: 1.3rem;
+    margin-top: -5%;
+    color: rgb(0, 0, 0);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+
+}
+
+
+.btn-user:hover,
+.btn-fav:hover,
+.btn-cart:hover
+{
+    transition: var(--trasition);
+    color: rgb(128,221,255);
+    -webkit-text-stroke-width: 0.2;   
+}
+
+
+
+
+/***************************** Nav PESQUISA/LOGIN/FAV/CARRINHO *****************************/
+
+.nav-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5vw;
+    padding: 1%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(255, 0, 0) 100%);
+}
+
+
+
+.search:hover{
+    transition: 0.5s;
+    box-shadow: 0px 0px 20px;
+}
+
+.btn-container{
+    display: flex;
+    
+}
+
+
+/***************************** BOTÕES CATEGORIAS *****************************/
+
+.btns-categoria{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5vw;
+
+}
+
+.btn-categ{
+    width: 100%;
+    border: 0;
+    background: transparent;
+    font-size: 2vw;
+    color: white;
+    cursor: pointer;
+    transition: var(--trasition);
+}
+
+.btn-categ:hover{
+    transition: var(--trasition);
+    width: 120%;
+    color: rgb(243, 230, 230);
+    background: rgb(128,221,255);
+    background: linear-gradient(180deg, rgba(128,221,255,1) 23%, rgba(9,56,121,1) 110%);
+    border-radius: var(--radius);
+}
+
+/***************************** LOGIN **************************************/
+
+.modal-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(30px);
+    display: grid;
+    place-items: center;
+    transition: 0.3s;
+
+    
+    visibility: hidden;
+    z-index: -10;
+}
+
+.open-modal {
+    visibility: visible;
+    z-index: 10;
+}
+
+.modal-container {
+    background: white;
+    border-radius: 20px;
+    width: 30vw;
+    height: 65vh;
+    max-width: 1170px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: red;
+    transform: scale(1.3);
+}
+
+
+
+.txtemail{
+    width: 70%;
+    height: 40px;
+    font-size: 25px;
+    padding-inline-start: 20px;
+
+    background: rgba(128, 128, 128, 0.116);
+
+    border-radius: 20px;
+}
+
+.txtsenha{
+    width: 70%;
+    height: 40px;
+    font-size: 25px;
+    padding-inline-start: 20px;
+
+    background: rgba(128, 128, 128, 0.116);
+
+    border-radius: 20px;
+}
+
+
+.btn-login{
+    height: 3vw;
+    width: 7vw;
+    margin: 1vw;
+
+    font-size: 20pt;
+
+    background: linear-gradient(45deg, rgba(128,221,255,1) 30%, rgb(72, 202, 241) 70%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 5px 1px;
+
+    transition: 0.1s;
+}
+
+.btn-login:active{
+    transform: translate(0, 0.4em);
+    box-shadow: 0 1px 0px 0px;  
+}
+
+.btn-nocad{
+    height: 2vw;
+    width: 10vw;
+    margin: 1vw;
+
+    font-size: 15pt;
+
+    background: rgba(128, 221, 255, 0.226);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: 0.1s;
+}
+
+.container-password{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+
+}
+
+.show-pass{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+
+    margin-left: 60%;
+}
+
+.fas.fa-eye{
+    font-size: 25px;
+}
+
+.show-green{
+    font-size: 25px;
+    color: rgb(0, 255, 21);
+}
+
+/***************************** CADASTRAR *****************************/
+
+.modal-nocad {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(30px);
+    display: grid;
+    place-items: center;
+    transition: 0.3s;
+
+    
+    visibility: hidden;
+    z-index: -10;
+}
+
+.open-modal-cad{
+    visibility: visible;
+    z-index: 10;
+}
+
+.nocad-container {
+    background: white;
+    border-radius: 20px;
+    width: 30vw;
+    height: 80vh;
+    max-width: 1170px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn-cad {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn-cad:hover {
+    color: red;
+    transform: scale(1.3);
+}
+
+
+.txtcad{
+    width: 70%;
+    height: 40px;
+    font-size: 25px;
+    padding-inline-start: 20px;
+
+    background: rgba(128, 128, 128, 0.116);
+
+    border-radius: 20px;
+}
+
+
+.btn-cadastrar{
+    height: 3vw;
+    width: 7vw;
+    margin: 2vw;
+
+    font-size: 20pt;
+
+    background: linear-gradient(45deg, rgba(128,221,255,1) 30%, rgb(72, 202, 241) 70%);
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 5px 1px;
+
+    transition: 0.1s;
+}
+
+
+.btn-cadastrar:active{
+    transform: translate(0, 0.4em);
+    box-shadow: 0 1px 0px 0px;  
+}
+
+
+
+
+
+/***************************** SLIDE *****************************/
+
+.section-img{
+    background: rgb(128,221,255);
+    background: linear-gradient(180deg, rgba(128,221,255,1) 0%, rgba(9,56,121,1) 60%, rgb(255, 255, 255) 100%);
+    padding: 1%;
+}
+
+
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#slide-show{
+    height: 800px;
+    width: 100%;
+    
+    margin-top: 5%;
+}
+.prev-btn,
+.next-btn {
+    color: rgb(231, 231, 231);
+    font-size: 4rem;
+    background: transparent;
+    border-color: transparent;
+    margin: -5%;
+    transition: 0.2s;
+    cursor: pointer;
+    height: 50%;
+    z-index: 1;
+}
+.prev-btn:active,
+.next-btn:active{
+    color: rgba(0, 0, 0, 0.26);
+}
+
+
+/***************************** BTNS OPÇOES *****************************/
+
+.section-opçoes{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(128,221,255,1) 5%, rgba(255,247,247,1) 100%);
+}
+
+.container-opçoes{
+    margin: 1%;
+
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    width: 250px;
+    height: 450px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    margin-top: 5%;
+}
+.card .image-box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+.card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 90%;
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(128,221,255,1);
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: inherit;
+    transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+    filter: grayscale(1) brightness(0.4);
+    
+}
+.card:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.content {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h2,
+.content p {
+    opacity: 0;
+    transition: 0.4s 0.2s ease;
+}
+.content h2 {
+    margin-bottom: 12px;
+    scale: 0.7;
+    color: #d1d1d1;
+}
+.content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d1d1d1;
+    transform: translateY(50%);
+}
+.card:hover .content h2 {
+    scale: 1;
+    opacity: 1;
+}
+.card:hover .content P {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/***************************** SUGESTÕES *****************************/
+
+.section-produtos{
+    overflow: hidden;
+
+}
+.sugestoes-produto{
+    margin-left: 1%;
+    text-align: start;
+    width: max-content;
+
+    margin-bottom: 2%;
+}
+
+.underline {
+    height: 0.25rem;
+    width: 15rem;
+    
+    background: rgba(128,221,255,1);
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5%;
+}
+
+.container-produtos{    
+    transition: 0.8s;
+    transform: translateX(0);
+
+    display: flex;
+    justify-content: baseline;
+
+    padding-left: 3%;
+}
+
+.img-sugestoes-produtos{
+    height: 400px;
+    margin-right: 5vw;
+    box-shadow: 20px 20px 40px 1px;
+    margin-bottom: 3%;
+}
+
+
+.container-produtos{
+    width: 100%;
+    height: 100%;
+}
+.container-produtos{
+    display: flex;
+    animation: infiniteSlide 25s linear infinite;
+}
+@keyframes infiniteSlide {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+/***************************** AQUARIOS *****************************/
+
+.section-aquario{
+    margin-top: 5%;
+    overflow: hidden;
+}
+.aquario-produto{
+    text-align: center;
+}
+
+.underline-aquario{
+    height: 0.25rem;
+    width: 8rem;
+    
+    background: rgba(128,221,255,1);
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: -1%;
+}
+
+.container-aquario{
+    display: flex;
+    justify-content: baseline;
+
+    transition: 0.8s;
+    transform: translateX(0);
+
+    margin: 2vw;
+}
+
+
+.img-aquario-produto{
+    height: 300px;
+    margin-right: 5vw;
+
+    box-shadow: 20px 20px 40px 1px;
+    margin-bottom: 3%;
+}
+
+
+.container-aquario{
+    width: 100%;
+    height: 100%;
+}
+.container-aquario{
+    display: flex;
+    animation: infiniteSlidee 20s linear infinite;
+}
+@keyframes infiniteSlidee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+/***************************** OUTROS *****************************/
+
+.section-outros{
+    margin-top: 5%;
+    
+}
+
+.outros-produto{
+    text-align: end;
+    margin-right: 1%;
+}
+
+.underline-outros{
+    height: 0.25rem;
+    width: 5rem;
+    
+    background: rgba(128,221,255,1);
+    margin-left: auto;
+    margin-right: 1%;
+
+    margin-top: -1%;
+
+}
+
+.container-outros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    margin-top: 2%;
+}
+
+
+.img-outros-produtos{
+    width: 125px;
+    border: solid;
+
+    box-shadow: 10px 10px 20px 0.1px;
+    margin-bottom: 3%;
+    
+    margin-inline: 1vw;
+}
+
+/***************************** PEIXES *****************************/
+.section-peixes{
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+
+}
+
+.peixe-produto{
+    text-align: center;
+    margin-right: 1%;
+}
+
+
+.underline-peixe{
+    height: 0.25rem;
+    width: 5rem;
+    
+    background: rgba(128,221,255,1);
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: -1%;
+}
+
+.container-peixe{
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.img-peixe-produtos{
+    width: 150px;
+    border: solid;
+    border-radius: 50%;
+
+    box-shadow: 10px 10px 20px 1px;
+
+    margin-top: 2%;
+}
+
+
+
+
+
+/***************************** FOOTER *****************************/
+
+.footer-principal{
+    display: grid;
+    background-color: #9D9D9D;
+}
+
+.container-contatos{
+    display: flex;
+    justify-content: center;
+}
+
+.Lado-A,
+.Lado-B{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-voltar-inicio{
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem;
+
+    background-color: #DADADA;
+    border: none;
+
+    cursor: pointer;
+
+    transition: var(--trasition);
+}
+
+.btn-voltar-inicio:hover{
+    background-color: #c2c0c0;
+
+    color: rgb(0, 0, 0);
+    font-size: 2.2rem;
+    
+}
+
+
+.btn-contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    background: transparent;
+
+    width: 0;
+    height: 50px;
+
+    padding-inline: 4rem;
+    font-size: 50px;
+
+    margin: 1vw;
+
+    text-align: center;
+    cursor: pointer;
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+
+.btn-contato:hover{
+    transition: var(--trasition);
+    -webkit-text-stroke-width: 0;
+    color: rgba(128,221,255,1);
+}
+
+
+.btn-contato > .txt-contato{
+    padding-inline: 1vw;
+    font-size: 1rem;
+}
+
+.underline-footer{
+    height: 0.25rem;
+    width: 100%;
+    
+    background: rgb(117, 117, 117);
+    
+    margin-bottom: 3vw;
+}
+
+
+
+.footer-condiçoes{
+    text-align: center;
+    background-color: #4B4B4B;
+    padding: 1vw;
+}
+
+
+/***************************** Responsividade *****************************/
+
+@media screen and (max-width: 1400px){
+    
+    .container-header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container-login{
+        width: 100%;
+
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    .logo{  
+        margin-top: 10%;
+        text-align: center;  
+        color: rgb(236, 6, 6);
+    }
+
+
+    .btn-categ{
+        font-size: 2rem;
+    }
+
+
+    .img-sugestoes-produtos{
+        box-shadow: 10px 10px 20px 1px;
+    }
+
+    .img-aquario-produto{
+        box-shadow: 10px 10px 20px 1px;
+    }
+
+    .container-opçoes{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    .logo>img{
+        height: 0;
+    }
+
+    .title-video{ 
+        width: 0;
+        height: 0;  
+        overflow: hidden;
+    }
+
+
+    .container-login{
+        width: 80%;
+    }
+
+    .search{
+        width: 90%;
+        margin: 5%;
+    }
+
+
+    .btns-categoria{
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    .btn-categ{
+        width: 50%;
+        font-size: 3rem;
+        margin-top: 5%;
+    }
+
+    .btn-categ:hover{
+        width: 80%;
+    }
+
+    .container-produtos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        animation: none;
+    }
+
+
+    .container-aquario{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        animation: none;
+    }
+
+    .img-aquario-produto{
+        width: 450px;
+    }
+}
+
+
+@media screen and (max-width: 655px){
+    .title-site{
+        color: aqua;
+    }
+
+    .img-sugestoes-produtos{
+        width: 450px;
+        height: 500px;
+    }
+}
+
+
+
