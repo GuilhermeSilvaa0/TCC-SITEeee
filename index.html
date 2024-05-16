@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguario</title>
+
+    <link rel="stylesheet" href="HTML/CSS/style.css">
+
+    <link rel="icon" type="image/png" href="imgs/logo.png">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header class="header-video">
+        <div class="container-header">
+            <h2 class="title-site">TITULO DO SITE</h2>
+
+            <input type="search" class="search">
+            
+            <div class="container-login">        
+                <button class="btn-user" >
+                    <i class="fa fa-user"></i>
+                    <p>Login</p>
+                </button>
+
+            
+                <button class="btn-fav">
+                    <i class="fa fa-heart"></i>
+                    <p>Favoritos</p>
+                </button>
+
+                <button class="btn-cart">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>Carrinho</p>
+                </button>
+            </div>
+        </div>
+
+        
+        <nav class="nav-opçoes">
+            <div class="btns-categoria">
+
+                <button class="btn-categ">
+                    XXXX
+                </button>
+
+                <button class="btn-categ">
+                    XXXX
+                </button>
+
+                <button class="btn-categ">
+                    XXXX
+                </button>
+
+                <button class="btn-categ">
+                    XXXX
+                </button>
+
+                <button class="btn-categ">
+                    XXXX
+                </button>
+
+                <button class="btn-categ">
+                    XXXX
+                </button>
+            </div>
+        </nav>
+
+        <div class="logo">
+            <img src="imgs/logo-baleia.png" class="logo-peixe">
+            <h1 class="title-video">TITULO DO SITE</h1>
+        </div>
+
+        <div class="modal-overlay">
+            <div class="modal-container">
+                <h1>Login</h1><hr>
+                <h3>Email</h3>
+                <input type="text" class="txtemail" placeholder="Digite seu Email">
+
+                <h3>Senha</h3>
+                <section class="container-password">
+                    <input type="password" class="txtsenha" id="password" placeholder="Digite sua senha">
+                        <button id="show-pass" class="show-pass">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                </section>
+                <br>
+
+                <button class="btn-login">
+                    Entrar
+                </button> <br>
+
+                <button class="btn-nocad">
+                    Crie sua conta
+                </button>
+
+                <button class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="modal-nocad">
+            <div class="nocad-container">
+
+                <h1>Cadastrar</h1><hr>
+                <h3>Nome</h3>
+                <input type="text" class="txtcad" placeholder="Digite seu nome">
+                <h3>Email</h3>
+                <input type="text" class="txtcad" placeholder="Digite seu Email">
+                <h3>Senha</h3>
+
+                <section class="container-password">
+                    <input type="password" class="txtcad" id="passwordCad" placeholder="Digite sua senha">
+                    <button id="show-pass-cad" class="show-pass">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </section>
+
+                <h3>Repita a senha</h3>
+                <input type="password" class="txtcad" placeholder="Digite sua senha novamente"><br>
+                
+                <button class="btn-cadastrar">
+                    Cadastrar
+                </button> <br>
+
+                <button class="close-btn-cad">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <video class="video-header" muted autoplay loop>
+            <source src="video/855798-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+        
+        <div class="transição-cor"></div>
+    </header>
+    
+    <main>
+        <!-- <nav class="nav-principal">
+            <div class="nav-center">
+                <div class="nav-header">
+                    <img src="imgs/logo.png" class="nav-logo">
+                    
+                </div>
+            </div>
+        </nav> -->
+
+
+
+        <section class="section-img">
+            <div class="img-container">
+                <button class="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <img src="imgs/img-propaganda/prop2.jpg" alt="" id="slide-show">
+
+                <button class="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+
+        <section class="section-opçoes">
+            <div class="container-opçoes">
+
+                <button class="card">
+                    <div class="image-box">
+                        <img src="imgs/peixe-opçoes.jpg">
+                    </div>
+            
+                    <div class="content">
+                        <h2>XXXX</h2>
+                        <P>XXXX</P>
+                    </div>
+                </button>
+
+                <button class="card">
+                    <div class="image-box">
+                        <img src="imgs/aquario.jpeg">
+                    </div>
+            
+                    <div class="content">
+                        <h2>XXXX</h2>
+                        <P>XXXX</P>
+                    </div>
+                </button>
+
+                <button class="card">
+                    <div class="image-box">
+                        <img src="imgs/bomba.jpeg">
+                    </div>
+            
+                    <div class="content">
+                        <h2>XXXX</h2>
+                        <P>XXXX</P>
+                    </div>
+                </button>
+
+                <button class="card">
+                    <div class="image-box">
+                        <img src="imgs/decoração.jpeg">
+                    </div>
+            
+                    <div class="content">
+                        <h2>XXXX</h2>
+                        <P>XXXX</P>
+                    </div>
+                </button>
+
+                <button class="card">
+                    <div class="image-box">
+                        <img src="imgs/ferramenta.jpg">
+                    </div>
+            
+                    <div class="content">
+                        <h2>XXXX</h2>
+                        <P>XXXX</P>
+                    </div>
+                </button>
+
+                <button class="card">
+                    <div class="image-box">
+                        <img src="imgs/peixes-racao.jpg">
+                    </div>
+            
+                    <div class="content">
+                        <h2>XXXX</h2>
+                        <P>XXXX</P>
+                    </div>
+                </button>
+
+            </div>
+        </section>
+
+
+        <section class="section-produtos">
+
+
+            <header class="sugestoes-produto">
+                <h1>Sugestões para você</h1>
+                <div class="underline"></div>
+            </header>
+
+            <div class="container-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-sugestoes-produtos">
+            </div>
+        </section>
+        
+        <section class="section-aquario">
+            <header class="aquario-produto">
+                <h1>Aquarios</h1>
+                <div class="underline-aquario"></div>
+            </header>
+            <div class="container-aquario">
+                <img src="imgs/branco-para-preencher - horizonte.png" alt=""  class="img-aquario-produto">
+                <img src="imgs/branco-para-preencher - horizonte.png" alt=""  class="img-aquario-produto">
+                <img src="imgs/branco-para-preencher - horizonte.png" alt=""  class="img-aquario-produto">
+
+                <img src="imgs/branco-para-preencher - horizonte.png" alt=""  class="img-aquario-produto">
+                <img src="imgs/branco-para-preencher - horizonte.png" alt=""  class="img-aquario-produto">
+                <img src="imgs/branco-para-preencher - horizonte.png" alt=""  class="img-aquario-produto">
+            </div>
+        </section>
+
+
+        <section class="section-outros">
+            <header class="outros-produto">
+                <h1>Outros</h1>
+                <div class="underline-outros"></div>
+            </header>
+
+            <div class="container-outros">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-outros-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-outros-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-outros-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-outros-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-outros-produtos">
+
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-outros-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-outros-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-outros-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-outros-produtos">
+                <img src="imgs/branco-para-preencher.png" alt="" class="img-outros-produtos">
+            </div>
+        </section>
+
+
+        <section class="section-peixes">
+            <header class="peixe-produto">
+                <h1>Peixes</h1>
+                <div class="underline-peixe"></div>
+            </header>
+
+            <div class="container-peixe">
+                <img src="imgs/quadrado-branco.jpg" alt="" class="img-peixe-produtos">
+                <img src="imgs/quadrado-branco.jpg" alt="" class="img-peixe-produtos">
+                <img src="imgs/quadrado-branco.jpg" alt="" class="img-peixe-produtos">
+
+                <img src="imgs/quadrado-branco.jpg" alt="" class="img-peixe-produtos">
+                <img src="imgs/quadrado-branco.jpg" alt="" class="img-peixe-produtos">
+                <img src="imgs/quadrado-branco.jpg" alt="" class="img-peixe-produtos">
+                
+                <img src="imgs/quadrado-branco.jpg" alt="" class="img-peixe-produtos">
+                <img src="imgs/quadrado-branco.jpg" alt="" class="img-peixe-produtos">
+                <img src="imgs/quadrado-branco.jpg" alt="" class="img-peixe-produtos">
+
+            </div>
+        </section>
+
+        <div class="transição-cor"></div>
+    </main>
+
+    <footer class="footer-principal">
+            <button class="btn-voltar-inicio">Voltar ao Inicio</button>
+            <div class="container-contatos">
+                <div class="Lado-A">
+                    <button class="btn-contato">
+                        <i class="fa fa-whatsapp"></i>
+                        <i class="txt-contato">XXXX</i>
+                    </button>
+
+                    <button class="btn-contato">
+                        <i class="fa fa-facebook-f"></i>
+                        <i class="txt-contato">XXXX</i>
+                    </button>
+
+                    <button class="btn-contato">
+                        <i class="fa fa-phone"></i>
+                        <i class="txt-contato">XXXX</i>
+                    </button>
+                </div>
+
+                <div class="Lado-B">
+                    <button class="btn-contato">
+                        <i class="fa fa-instagram"></i>
+                        <i class="txt-contato">XXXX</i>
+                    </button>
+
+                    <button class="btn-contato">
+                        <i class="fa fa-telegram"></i>
+                        <i class="txt-contato">XXXX</i>
+                    </button>
+
+                    <button class="btn-contato">
+                        <i class="fa fa-twitter"></i>
+                        <i class="txt-contato">XXXX</i>
+                    </button>
+                </div>
+            </div>
+            <div class="underline-footer"></div>
+            <div class="footer-condiçoes">
+                <p>Condições de UsoNotificação de PrivacidadeCookiesAnúncios Baseados em Interesses</p>
+
+                <p>© 2024 xxxxxxx, Inc.</p>
+
+                <p>Av. xxxxxxxxxxxx, xxxx, xxxx, xx° andar - São Paulo CEP: xxxxx-xxx | Fale conosco| 
+                ajuda-xxxxxx@xxxxxx.com.br</p>
+
+                <p>Formas de pagamento aceitas: cartões de crédito (Visa, MasterCard, Elo e American Express), cartões de débito (Visa e Elo), Boleto e Pix.</p>
+            </div>
+    </footer>
+
+    <script src="JS/Carrosel/carrosel-header.js"></script>
+    <script src="JS/Login.js"></script>
+    <!--<script src="JS/Carrosel/carrosel-sugestoes-produtos.js"></script>
+    <script src="JS/Carrosel/carrosel-aquario-produto.js"></script>-->
+
+</body>
+</html>
